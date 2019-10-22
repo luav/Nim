@@ -4510,6 +4510,8 @@ proc substr*(s: string, first, last: int): string =
     result[i] = s[i+first]
 
 proc substr*(s: string, first = 0): string =
+  ## Copies a slice of `s` staring from the `first` character up to the end
+  ## into a new string and returns this new string.
   result = substr(s, first, high(s))
 
 when defined(nimconfig):
